@@ -14,7 +14,7 @@
   line-height: 1.1;
 }
 
- .hero-left h2 {
+.hero-left h2 {
   color: #090909;
   font-size: 20px;
   font-weight: 600;
@@ -25,13 +25,13 @@
   font-weight: 700;
 }
 
-.hero-hand-icon {
+.hand-hand-icon {
   display: flex;
   align-items: center;
   gap: 20px;
 }
 
-.hero-hand-icon img {
+.hand-hand-icon img {
   width: 100px;
 }
 
@@ -48,4 +48,12 @@
   color: white;
   font-size: 22px;
   font-weight: 500;
-} 
+}
+
+.hero-right {
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  flex: 1;
+}
+
