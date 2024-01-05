@@ -1,20 +1,22 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './ProductDisplay.css'
 import star_icon from '../Assets/star_icon.png'
 import star_dull_icon from '../Assets/star_dull_icon.png'
+import { ShopContext } from '../../Context/ShopContext'
 
 const ProductDisplay = (props) => {
 
     const { product } = props;
+    const { addToCart } = useContext(ShopContext);
 
     return (
-        <div className='Productdisplay'>
+        <div className='productDisplay'>
             <div className="productDisplay-left">
-                <div className="productDisplay_img_list">
-                    <img src={product.image} alt="" />
-                    <img src={product.image} alt="" />
-                    <img src={product.image} alt="" />
-                    <img src={product.image} alt="" />
+                <div className="productDisplay-img-list">
+                    <img src={product.image} alt="product_image" />
+                    <img src={product.image} alt="product_image" />
+                    <img src={product.image} alt="product_image" />
+                    <img src={product.image} alt="product_image" />
                 </div>
                 <div className="productDisplay-img">
                     <img className='productDisplay-main-img' src={product.image} alt="" />
@@ -22,7 +24,7 @@ const ProductDisplay = (props) => {
             </div>
             <div className="productDisplay-right">
                 <h1>{product.name}</h1>
-                <div className="productDisplay-right-star">
+                <div className="productDisplay-right-stars">
                     <img src={star_icon} alt="" />
                     <img src={star_icon} alt="" />
                     <img src={star_icon} alt="" />
@@ -38,7 +40,7 @@ const ProductDisplay = (props) => {
                 </div>
                 <div className="productDisplay-right-size">
                     <h1>Select Size</h1>
-                    <div className="productDisplay-right-size">
+                    <div className="productDisplay-right-sizes">
                         <div>S</div>
                         <div>M</div>
                         <div>L</div>
@@ -46,7 +48,7 @@ const ProductDisplay = (props) => {
                         <div>XXL</div>
                     </div>
                 </div>
-                <button>Add to Cart</button>
+                <button onClick={() => addToCart(product.id)}>Add to Cart</button>
                 <p className='productDisplay-right-category'><span>Category : </span>Women, T-Shirts, Crop-top</p>
                 <p className='productDisplay-right-category'><span>Tags : </span>Modern, Latest</p>
             </div>

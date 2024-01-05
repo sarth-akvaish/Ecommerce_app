@@ -1,3 +1,10 @@
-.BreadCrum{
-    
+.BreadCrum {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #5e5e5e;
+  text-transform: capitalize;
+  padding: 20px;
 }
