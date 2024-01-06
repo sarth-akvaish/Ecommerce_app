@@ -8,3 +8,30 @@
   text-transform: capitalize;
   padding: 20px;
 }
+
+@media (max-width: 1280px) {
+  .Breadcrum {
+    margin: 30px 50px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .Breadcrum {
+    margin: 30px 30px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 800px) {
+  .Breadcrum {
+    margin: 30px 10px;
+    font-size: 12 px;
+  }
+}
+
+@media (max-width: 500px) {
+  .BreadCrum{
+    font-size: 10px;
+  }
+}

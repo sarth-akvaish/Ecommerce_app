@@ -26,10 +26,10 @@ const Navbar = () => {
             </div>
             <img className='nav-dropdown' onClick={dropdown_toggle} src="https://cdn.iconscout.com/icon/free/png-256/free-hamburger-menu-462145.png" alt="" />
             <ul ref={menuRef} className="nav-menu">
-                <li onClick={() => setMenu("shop")}><Link to='/' style={{ textDecoration: "none" }}>Shop</Link>  {menu === "shop" ? <hr /> : <></>}</li>
-                <li onClick={() => setMenu("men")}><Link to='/men' style={{ textDecoration: "none" }}>Men</Link> {menu === "men" ? <hr /> : <></>}</li>
-                <li onClick={() => setMenu("women")}><Link to='/women' style={{ textDecoration: "none" }}>Women</Link> {menu === "women" ? <hr /> : <></>}</li>
-                <li onClick={() => setMenu("kids")}><Link style={{ textDecoration: "none" }} to='/kids'>Kids</Link> {menu === "kids" ? <hr /> : <></>}</li>
+                <li onClick={() => setMenu("shop")}><Link to='/' style={{ textDecoration: "none",fontSize:"18px" }}>Shop</Link>  {menu === "shop" ? <hr /> : <></>}</li>
+                <li onClick={() => setMenu("men")}><Link to='/men' style={{ textDecoration: "none",fontSize:"18px" }}>Men</Link> {menu === "men" ? <hr /> : <></>}</li>
+                <li onClick={() => setMenu("women")}><Link to='/women' style={{ textDecoration: "none",fontSize:"18px" }}>Women</Link> {menu === "women" ? <hr /> : <></>}</li>
+                <li onClick={() => setMenu("kids")}><Link style={{ textDecoration: "none",fontSize:"18px" }} to='/kids'>Kids</Link> {menu === "kids" ? <hr /> : <></>}</li>
             </ul>
             <div className="nav-login-cart">
                 <Link to='/login'><button>Login</button></Link>

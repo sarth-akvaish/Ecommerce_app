@@ -1,8 +1,6 @@
 .logsign {
   max-width: 100%;
-  /* height: 80vh; */
   background: #fce3fe;
-  /* padding-top: 80px; */
   padding: 40px;
 }
 
@@ -71,4 +69,55 @@
   color: #5c5c5c;
   font-size: 18px;
   font-weight: 500;
+}
+
+@media (max-width: 1280px) {
+  .logsign {
+    padding-top: 50px;
+  }
+  .logsign-container {
+    width: auto;
+    max-width: 500px;
+    max-height: 500px;
+  }
+  .logsign-container h1 {
+    margin: 10px 0px;
+  }
+  .logsign-fields {
+    gap: 20px;
+    margin-top: 20px;
+  }
+  .logsign-fields input {
+    height: 65px;
+    width: 93%;
+  }
+  .logsign-container button {
+    width: 100%;
+  }
+  .logsign-login {
+    font-size: 16px;
+  }
+  .logsign-agree {
+    font-size: 14px;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 800px) {
+  .logsign-container {
+    padding: 20px 30px;
+  }
+  .logsign-container h1 {
+    font-size: 24px;
+  }
+  .logsign-fields {
+    margin-top: 20px;
+  }
+  .logsign-fields input {
+    height: 50px;
+  }
+  .logsign-container button {
+    height: 50px;
+    font-size: 16px;
+  }
 }
