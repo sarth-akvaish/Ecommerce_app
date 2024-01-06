@@ -6,14 +6,13 @@ import NewCollection from '../Components/NewCollections/NewCollection'
 import Newsletter from '../Components/Newsletter/Newsletter'
 
 const Shop = () => {
-    return (
-        <div>
-            <Hero />
-            <Popular />
-            <Offers />  
-            <NewCollection />
-            <Newsletter />
-        </div>
+    return (<>
+        <Hero />
+        <Popular />
+        <Offers />
+        <NewCollection />
+        <Newsletter />
+    </>
     )
 }
 
