@@ -16,7 +16,7 @@ const LoginSignup = () => {
     const login = async () => {
         // console.log('Login function', formData)
         let responeData;
-        await fetch(`${process.env.API_KEY}/login`, {
+        await fetch(`https://ecommerce-backend-vtnj.onrender.com/login`, {
             method: 'POST',
             headers: {
                 Accept: 'application/json',
@@ -39,7 +39,7 @@ const LoginSignup = () => {
         // console.log('Signup function', formData)
 
         let responeData;
-        await fetch(`${process.env.API_KEY}/signup`, {
+        await fetch(`https://ecommerce-backend-vtnj.onrender.com/signup`, {
             method: 'POST',
             headers: {
                 Accept: 'application/json',
