@@ -26,7 +26,7 @@ app.get("/", (req, res) => {
 const storage = multer.diskStorage({
     destination: './upload/images',
     filename: (req, file, cb) => {
-        return cb(null, Date.now() + '-' + file.originalname);
+        return cb(null, `${file.filename}_${Date.now()}${path.extname(file.originalname)}`);
     }
 })
 
@@ -37,12 +37,9 @@ const upload = multer({ storage: storage });
 app.use('/images', express.static('upload/images'));
 
 app.post("/upload", upload.single('product'), (req, res) => {
-    if (!req.file) {
-        return res.status(400).json({ error: "No file Uploaded" });
-    }
     res.json({
         success: 1,
-        message: "File uploaded Successfully"
+        image_url: `https://ecommerce-backend-vtnj.onrender.com/images/${req.file.filename}`
     })
 })
 
