@@ -1,4 +1,4 @@
-const port = 4000;
+// const process.env.PORT = 4000;
 const express = require("express");
 const mongoose = require('mongoose');
 const jwt = require('jsonwebtoken');
@@ -39,7 +39,7 @@ app.use('/images', express.static('upload/images'));
 app.post("/upload", upload.single('product'), (req, res) => {
     res.json({
         success: 1,
-        image_url: `http://localhost:${port}/images/${req.file.filename}`
+        image_url: `http://localhost:${process.env.PORT}/images/${req.file.filename}`
     })
 })
 
@@ -120,14 +120,11 @@ app.post('/signup', async (req, res) => {
     })
 
     await user.save();
-
-
     const data = {
         user: {
             id: user.id
         }
     }
-
 
     const token = jwt.sign(data, 'secret_ecom');
     res.json({
@@ -294,9 +291,9 @@ app.get('/allproducts', async (req, res) => {
 })
 
 
-app.listen(port, (error) => {
+app.listen(process.env.PORT, (error) => {
     if (!error)
-        console.log("Server is running on " + port)
+        console.log("Server is running on " + process.env.PORT)
     else
         console.log("Error" + error)
 })
