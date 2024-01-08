@@ -9,7 +9,7 @@ const NewCollection = () => {
     const [new_collection, setNew_collection] = useState([])
 
     useEffect(() => {
-        fetch(`${process.env.API_KEY}/newcollections`)
+        fetch(`https://ecommerce-backend-vtnj.onrender.com/newcollections`)
             .then((res) => res.json())
             .then((data) => setNew_collection(data));
     },[])

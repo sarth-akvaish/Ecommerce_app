@@ -8,7 +8,7 @@ const Popular = () => {
     const [popularproducts, setPopularproducts] = useState([])
 
     useEffect(() => {
-        fetch(`${process.env.API_KEY}/popularinwomen`)
+        fetch(`https://ecommerce-backend-vtnj.onrender.com/popularinwomen`)
             .then((res) => res.json())
             .then((data) => setPopularproducts(data));
     }, []);

@@ -17,12 +17,12 @@ const ShopContextProvider = (props) => {
     const [cartItems, setCartItems] = useState(getDefaultCart());
 
     useEffect(() => {
-        fetch(`${process.env.API_KEY}/allproducts`)
+        fetch(`https://ecommerce-backend-vtnj.onrender.com/allproducts`)
             .then((res) => res.json())
             .then((data) => setAll_product(data));
 
         if (localStorage.getItem('auth-token')) {
-            fetch(`${process.env.API_KEY}/getcart`, {
+            fetch(`https://ecommerce-backend-vtnj.onrender.com/getcart`, {
                 method: 'POST',
                 headers: {
                     Accept: 'application/form-data',
@@ -38,7 +38,7 @@ const ShopContextProvider = (props) => {
     const addToCart = (itemId) => {
         setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }))
         if (localStorage.getItem('auth-token')) {
-            fetch(`${process.env.API_KEY}/addtocart`, {
+            fetch(`https://ecommerce-backend-vtnj.onrender.com/addtocart`, {
                 method: 'POST',
                 headers: {
                     Accept: 'application/form-data',
@@ -58,7 +58,7 @@ const ShopContextProvider = (props) => {
         setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }))
 
         if (localStorage.getItem('auth-token')) {
-            fetch(`${process.env.API_KEY}/removefromcart`, {
+            fetch(`https://ecommerce-backend-vtnj.onrender.com/removefromcart`, {
                 method: 'POST',
                 headers: {
                     Accept: 'application/form-data',
